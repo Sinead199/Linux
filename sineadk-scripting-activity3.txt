@@ -1,0 +1,43 @@
+#! /bin/sh
+
+# Scripts
+
+#You are in charge of creating a program for the lottery in your area! The options are for numbers between 1and 50. Create a script that picks 5 for each draw plus a bonus ball number between 1 and 10. Output the numbers to a file that has the date in its name.
+
+#Draw numbers : 1 - 50
+#Bonus numbers : 1 - 10
+
+#touch usernumbers.log
+
+#while true
+#do
+#	read number
+#	echo $((1 + RANDOM % 50))  >> usernumbers.log
+#if [ `wc -l usernumbers.log` -gt 5 ]
+#then
+#	read bonusnumber
+#	echo $((1 + RANDOM % 10)) >> usernumbers.log
+#	break
+#else
+#	continue
+#fi
+#done
+
+#if [ $# -ne 50 ];
+#then
+#	echo -e "nUsage:\t$0 START END\n"
+#	exit 1
+#fi
+#DIFF=$(($50-$1))
+#RANDOM=$$
+#for i in `seq 5`
+#do
+#	R=$(($(($RANDOM%$DIFF))+$1))
+#	echo $R
+#done
+touch usernumbers.log
+
+echo First 5 numbers: >> usernumbers.log 
+shuf -i 1-50 -n 5 >> usernumbers.log
+echo Bonus number: >> usernumbers.log
+shuf -i 1-10 -n 1 >> usernumbers.log
