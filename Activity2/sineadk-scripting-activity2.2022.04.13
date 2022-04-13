@@ -1,0 +1,9 @@
+#! /bin/sh
+
+DATE=`date +%Y.%m.%d`
+
+# Rename all *.txt to *.text
+
+for f in *.txt; do 
+    mv -- "$f" "${f%.txt}.$DATE"
+done
