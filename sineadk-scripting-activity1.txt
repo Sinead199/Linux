@@ -1,0 +1,19 @@
+#!/bin/sh
+
+# scripts
+
+echo Session username is $USER
+
+TODAY=`date +%d.%m.%Y`
+echo Current date is $TODAY
+
+TIME=$(date +"%T")
+echo The time is $TIME
+
+echo Current directory is `pwd`
+
+NoFiles=`ls | wc -l`
+echo The number of files in directory is $NoFiles
+
+LargestFile=`du -sh * | sort -rh | head -1`
+echo The largest file is $LargestFile
