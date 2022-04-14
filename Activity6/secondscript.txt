@@ -1,0 +1,35 @@
+#! /bin/sh
+
+#Taking inputs and reading
+echo "Enter first number: "
+read a
+
+echo "Enter second number: " 
+read b
+
+#Ensure theres a valid input
+
+if [ -z "$a" ] || [ -z "$b" ]
+then
+	echo "Inputs can't be blank. Please try again"
+	exit 0
+fi
+
+#Validate the input is integer or float
+
+if ! [[ "$a" =~ ^[+-]?[0-9]+\.?[0-9]*$ ]] || ! [[ "$b" =~ ^[+-]?[0-9]+\.?[0-9]*$ ]]
+then
+	echo "Inputs must be numbers"
+	exit 0
+fi
+
+if (( "$a">"$b" ))
+then
+	DIFF=$(echo "${a}" - "${b}" | bc)
+	echo "The difference between integers is: "$DIFF
+
+elif (( "$b">"$a"))
+then
+	DIFF=$(echo "${b}" - "${a}" | bc)
+	echo "The difference between integers is: "$DIFF
+fi
