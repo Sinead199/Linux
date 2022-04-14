@@ -1,0 +1,15 @@
+#! /bin/sh
+
+echo User numbers
+
+echo First 5 numbers: >> usernumbers.log 
+shuf -i 1-50 -n 5 >> usernumbers.log
+echo Bonus number: >> usernumbers.log
+shuf -i 1-10 -n 1 >> usernumbers.log
+
+echo Winners numbers
+
+echo First 5 numbers: >> usernumbers.log
+shuf -i 1-50 -n 5 >> usernumbers.log
+echo Bonus number: >> usernumbers.log
+shuf -i 1-10 -n 1 >> usernumbers.log
