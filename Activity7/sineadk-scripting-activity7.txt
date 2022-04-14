@@ -1,3 +1,55 @@
 #! /bin/sh
 
-echo "Question1?;F" | awk -F';' '{print$1}'
+iterator=1
+
+declare -a header
+declare -a y
+declare -a n
+
+header=("Cyrodiil" "Black Swamp" "Elsweyr" "Hammerfell" "High River" "Morrowood" "Skyrim" "Summerset Isles" "Vanhaven" "Is it my favourite game?")
+
+y=("Cyrodiil" "Elsweyr" "Hammerfell" "Skyrim" "Summerset Isles" "Is it my favourit game?")
+
+n=("Black Swamp" "High River" "Morrowood" "Vanhaven")
+
+
+#Changes case to lowercase
+
+for item in "${header[@]}";
+do
+	echo "Is ${i} a province in Tamriel?(Y/N)"
+    	read answer
+
+    #How to change variable to lowercase
+    answer=${answer,,}
+
+
+# Check the input value
+
+if [[ $answer == 'y' && ${i} = $y ]];
+then
+        echo "You're Correct"
+
+elif [[ $answer == 'y' && ${i} != $y ]];
+then
+        echo "You're Incorrect"
+
+elif [[ $answer == 'n' && ${i} = $n ]];
+then
+	echo "You're Correct"
+
+elif [[ $answer == 'n' && ${i} != $n ]];
+then
+        echo "You're Incorrect"
+
+else
+       echo "Invalid answer."
+        exit 0
+fi
+done
+
+#while iterator <= 10 then
+#echo "Question $iterator" 
+#iterator++
+
+
