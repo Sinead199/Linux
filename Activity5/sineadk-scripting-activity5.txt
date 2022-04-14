@@ -1,0 +1,16 @@
+#! /bin/sh
+
+echo "Enter a number: "
+read number
+
+num2=0
+
+while [ $number -gt 0 ]
+
+do
+num2=$(expr $num2 \* 10)
+k=$(expr $number % 10)
+num2=$(expr $num2 + $k)
+number=$(expr $number / 10)
+done
+echo number is $num2
