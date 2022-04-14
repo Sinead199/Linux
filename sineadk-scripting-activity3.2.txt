@@ -1,15 +1,27 @@
 #! /bin/sh
 
-echo User numbers
+rm winticket.log
+touch winticket.log
 
-echo First 5 numbers: >> usernumbers.log 
-shuf -i 1-50 -n 5 >> usernumbers.log
-echo Bonus number: >> usernumbers.log
-shuf -i 1-10 -n 1 >> usernumbers.log
+#User ticket
 
-echo Winners numbers
+echo User number >> winticket.log
+FIRSTNO=$(shuf -i 1-50 -n 5)
+echo First 5 numbers: $FIRSTNO >> winticket.log
 
-echo First 5 numbers: >> usernumbers.log
-shuf -i 1-50 -n 5 >> usernumbers.log
-echo Bonus number: >> usernumbers.log
-shuf -i 1-10 -n 1 >> usernumbers.log
+BONUS=$(shuf -i 1-10 -n 1)
+echo Bonus number: $BONUS >> winticket.log
+
+#Winning ticket
+
+echo Winning number >> winticket.log
+FIRSTWIN=$(shuf -i 1-50 -n 5)
+echo First 5 numbers: $FIRSTWIN >> winticket.log
+
+BONUSWIN=$(shuf -i 1-10 -n 1)
+echo Bonus number: $BONUSWIN >> winticket.log
+
+#Comparing numbers
+
+#User1=( $(shuf -i 1-50 -n 5))
+#echo $User1 >> winticket.log
