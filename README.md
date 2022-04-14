@@ -2,7 +2,6 @@
 This repository is here to display skills which I have learned from my MThree course. 
 
 Activity 1
-
 Create a simple shell script to tell the user about their session – they need to know:
 • What their username is
 • What the current date is
@@ -10,18 +9,12 @@ Create a simple shell script to tell the user about their session – they need 
 • What their current working directory is
 • How many files they have in that directory
 • What is the biggest file in their current directory
-
-<h3>Activity 2<h3>
-
+Activity 2
 Create a directory with a few test files in it (the files can be empty). Now write a script that for every file in that directory you rename it to have an extension of today's date in YYYYMMDD format.
-
 Activity 3
-
 You are in charge of creating a program for the lottery in your area! The options are for numbers between 1and 50. Create a script that picks 5 for each draw plus a bonus ball number between 1 and 10. Output the numbers to a file that has the date in its name.
 Create another script that will allow users to check their lottery numbers and advise them if they match or not and how many matches they got.
-
 Activity 4
-
 Write a script to validate how secure someone's password is. Things you would care about:
 • Length should be 8 or more characters
 • The password should contain numbers and letters
@@ -124,4 +117,5 @@ New buy order for apple with order id 12335, 100 shares at price 54.2
 Partial fill for apple with order id 12335, 20 shares at price 54.2
 Cancel message for apple with order id 12335
 Final state of order for apple with order id 12335: traded 40 shares at price 54.2. 
-Remember that each time you run the fix generator script, it creates a new log file so this is a good way to test.![image](https://user-images.githubusercontent.com/53983017/163470673-53552e89-0c59-461a-b35a-6ef061be6d0a.png)
+Remember that each time you run the fix generator script, it creates a new log file so this is a good way to test.
+![image](https://user-images.githubusercontent.com/53983017/163471088-9f4a84f6-58e9-4f06-b9d5-d4ad644b0fd6.png)
