@@ -1,0 +1,3 @@
+#! /bin/sh
+
+echo "Question1?;F" | awk -F';' '{print$1}'
