@@ -6,16 +6,16 @@ declare -a header
 declare -a y
 declare -a n
 
-header=("Cyrodiil" "Black Swamp" "Elsweyr" "Hammerfell" "High River" "Morrowood" "Skyrim" "Summerset Isles" "Vanhaven" "Is it my favourite game?")
+header=("Cyrodiil" "Black Swamp" "Elsweyr" "Hammerfell" "High River" "Morrowood" "Skyrim" "Summerset Isles" "Vanhaven" "Elden")
 
-y=("Cyrodiil" "Elsweyr" "Hammerfell" "Skyrim" "Summerset Isles" "Is it my favourit game?")
+y=("Cyrodiil" "Elsweyr" "Hammerfell" "Skyrim" "Summerset Isles")
 
-n=("Black Swamp" "High River" "Morrowood" "Vanhaven")
+n=("Black Swamp" "High River" "Morrowood" "Vanhaven" "Elden")
 
 
 #Changes case to lowercase
 
-for item in "${header[@]}";
+for i in "${header[@]}";
 do
 	echo "Is ${i} a province in Tamriel?(Y/N)"
     	read answer
@@ -26,21 +26,24 @@ do
 
 # Check the input value
 
-if [[ $answer == 'y' && ${i} = $y ]];
+if [[ $answer == 'y' && " ${y[*]} " =~ " ${i} " ]];
 then
-        echo "You're Correct"
+        echo "Correct!"
+    # whatever you want to do when array contains value
 
-elif [[ $answer == 'y' && ${i} != $y ]];
+elif [[ $answer == 'y' &&  ! " ${y[*]} " =~ " ${i} " ]];
 then
-        echo "You're Incorrect"
+	echo "Incorrect!"
 
-elif [[ $answer == 'n' && ${i} = $n ]];
+elif [[ $answer == 'n' && " ${n[*]} " =~ " ${i} " ]];
 then
-	echo "You're Correct"
+        echo "Correct!"
+    # whatever you want to do when array contains value
 
-elif [[ $answer == 'n' && ${i} != $n ]];
+elif [[ $answer == 'n' &&  ! " ${n[*]} " =~ " ${i} " ]];
 then
-        echo "You're Incorrect"
+        echo "Incorrect!"
+
 
 else
        echo "Invalid answer."
