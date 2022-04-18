@@ -1,0 +1,5 @@
+#! /bin/sh
+
+#Prompt user for 5 - 10 integers
+
+for((i=
