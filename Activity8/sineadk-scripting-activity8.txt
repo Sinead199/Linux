@@ -1,5 +1,40 @@
-#! /bin/sh
+#! /bin/bash
 
-#Prompt user for 5 - 10 integers
+#Prompt user for 5 - 10 
+i=1
 
-for((i=
+while [ $i -le 10 ]
+do
+	echo "Input number"
+	read INT
+    	
+	inputs=("${inputs[@]}" $INT)
+  	((i++))
+	echo "Array so far: ${inputs[@]}"
+
+	if [[ $i -gt 5 ]]
+	then
+		echo "Do you want to finish input? (Y/N)"
+		read BIN
+
+		#Change to lowercase
+		BIN=${BIN,,}
+
+		if [[ $BIN == 'y' || $i -gt 10 ]]
+		then
+			echo ${inputs[@]}
+			echo "Loops have been finished"
+			#Product of integers
+			#Average of integers
+			#Sum of integers
+			#Min of integers
+			#Max of integers
+
+			break
+		fi
+	fi
+done
+#if [ "$i" -gt 10 ]
+#then
+#	echo "Input should not be longer than 10"
+#fi
