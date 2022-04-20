@@ -25,10 +25,24 @@ do
 			echo ${inputs[@]}
 			echo "Loops have been finished"
 			#Product of integers
+			prod=$(($(IFS="*"; echo "${inputs[*]}")))
+			
 			#Average of integers
+			#len=${#inputs[@]}
+			#avg=$((sum / len))
+
 			#Sum of integers
+			sum=$(IFS="+"; echo "$((${inputs[*]}))")
+			
 			#Min of integers
+			#min=
+
 			#Max of integers
+			#max=
+
+			echo "Product is: $prod"
+			echo "Sum is: $sum"
+			#echo "Average is: $avg"
 
 			break
 		fi
