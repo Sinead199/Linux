@@ -1,0 +1,22 @@
+#!/bin/bash
+
+echo "Please input file name (eg file.txt)"
+read filename
+
+if test -f "$filename";
+then
+	echo "$filename already exists!"
+	cat $filename
+else
+	touch $filename
+
+	echo "Please input number of lines to write"
+	read lines
+
+	count=1
+	while [ $count -le $lines ]
+	do
+		echo $RANDOM >> $filename
+		((count++))
+	done
+fi
