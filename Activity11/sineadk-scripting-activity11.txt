@@ -1,0 +1,8 @@
+#!/bin/bash
+
+cat numbers.txt
+
+#tac -s' ' numbers.txt
+awk '{for(i=NF;i>=1;i--) printf "%s ", $i;print ""}' numbers.txt > reverse.txt
+
+#Get rid of duplicates
