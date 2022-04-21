@@ -1,0 +1,13 @@
+#!/bin/bash
+
+echo "Please input file name (eg. /home/file.txt)"
+read filename
+
+if test -f "$filename";
+then
+	echo "$filename already exists!"
+else
+	touch $filename
+	echo "New file created!"
+fi
+

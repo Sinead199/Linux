@@ -43,12 +43,9 @@ do
 			echo "Product is: $prod"
 			echo "Sum is: $sum"
 			#echo "Average is: $avg"
-
+			#echo "Minimum is: $min"
+			#echo "Maximum is: $max"
 			break
 		fi
 	fi
 done
-#if [ "$i" -gt 10 ]
-#then
-#	echo "Input should not be longer than 10"
-#fi
