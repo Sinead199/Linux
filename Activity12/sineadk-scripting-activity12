@@ -1,0 +1,11 @@
+#!/bin/bash
+
+#read in file1 contents
+
+#read in file2 contents
+
+#check for common elements
+
+#if there is then show the values
+
+# else say nothing was found

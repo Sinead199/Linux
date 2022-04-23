@@ -1,0 +1,3 @@
+Hello, this is file 1.
+In the script, I will compare two files and find if there are any comparisons between the two.
+I will also print an output to confirm or deny the matches.

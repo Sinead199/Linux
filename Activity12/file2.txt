@@ -1,0 +1,2 @@
+File 2 is another file to compare with the first.
+Finding mtches comes in useful in a variety of ways.
