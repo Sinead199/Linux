@@ -1,11 +1,5 @@
 #!/bin/bash
 
-#read in file1 contents
+echo "These are the common strings from both files"
 
-#read in file2 contents
-
-#check for common elements
-
-#if there is then show the values
-
-# else say nothing was found
+comm -12 <(grep -oP '\w+' file1.txt|sort -u) <(grep -oP '\w+' file2.txt|sort -u)
